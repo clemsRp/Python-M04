@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
-
-def main(filename: str):
+def main(filename: str) -> None:
+    '''
+    Dsiplay the content of a file
+    '''
     print("Accessing Storage Vault:", filename)
 
     file = open(filename, "r")

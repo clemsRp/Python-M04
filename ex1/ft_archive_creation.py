@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
-
-def put_nbr(num: int):
+def put_nbr(num: int) -> str:
+    '''
+    Return the string of a number with always 3 digits
+    '''
     if num >= 100:
         return str(num)
     elif num >= 10:
@@ -10,7 +12,10 @@ def put_nbr(num: int):
         return "00" + str(num)
 
 
-def main(filename: str, content: list):
+def main(filename: str, content: list) -> None:
+    '''
+    Create a file and write inside of it
+    '''
     print("Initializing new storage unit:", filename)
 
     file = open(filename, "w")

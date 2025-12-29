@@ -3,7 +3,10 @@
 import sys
 
 
-def get_inputs():
+def get_inputs() -> tuple:
+    '''
+    Return the inputs
+    '''
     print("Input Stream active.", end=" ")
     ar_id = input("Enter archivist ID: ")
 
@@ -12,7 +15,7 @@ def get_inputs():
 
     print(file=sys.stdout)
 
-    return ar_id, status
+    return (ar_id, status)
 
 
 if __name__ == "__main__":

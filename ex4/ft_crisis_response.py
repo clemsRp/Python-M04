@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
-
-def open_file(filename: str):
+def open_file(filename: str) -> None:
+    '''
+    Open a file and handling the error cases
+    '''
     try_state = "CRISIS ALERT"
     response = ""
     status = "Normal operations resumed"

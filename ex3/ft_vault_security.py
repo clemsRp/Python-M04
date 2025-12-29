@@ -1,13 +1,18 @@
 #!/usr/bin/env python3
 
-
-def mode(file_mode: str):
+def mode(file_mode: str) -> str:
+    '''
+    Return a string depending of how we open the file
+    '''
     if file_mode in ["a", "w", "r+"]:
         return "PRESERVATION"
     return "EXTRACTION"
 
 
-def main(file_list: list):
+def main(file_list: list) -> None:
+    '''
+    Open and read or write each file in files_list
+    '''
     for file in file_list:
         with open(file["name"], file["mode"]) as f:
             print(f"\nSECURE {mode(file["mode"])}:")
