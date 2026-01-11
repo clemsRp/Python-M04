@@ -15,7 +15,8 @@ def main(file_list: list) -> None:
     '''
     for file in file_list:
         with open(file["name"], file["mode"]) as f:
-            print(f"\nSECURE {mode(file["mode"])}:")
+            file_mode = file["mode"]
+            print(f"\nSECURE {mode(file_mode)}:")
             print(f.read())
 
             if file["mode"] == "r+":
